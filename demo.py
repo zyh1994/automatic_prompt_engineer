@@ -349,7 +349,7 @@ def get_demo():
                                                    value="Instruction: [PROMPT]\nInput: [INPUT]\nOutput: [OUTPUT]",
                                                    label="Evaluation Template")
                     with gr.Row():
-                        basic_cost = gr.Textbox(lines=1, value="", label="Estimated Cost ($)", disabled=True)
+                        basic_cost = gr.Textbox(lines=1, value="", label="Estimated Cost ($)", interactive=True)
                         basic_cost_button = gr.Button("Estimate Cost")
                         basic_ape_button = gr.Button("APE")
 
@@ -362,7 +362,7 @@ def get_demo():
                                                     label="Demos Template")
 
                     with gr.Row():
-                        cost = gr.Textbox(lines=1, value="", label="Estimated Cost ($)", disabled=True)
+                        cost = gr.Textbox(lines=1, value="", label="Estimated Cost ($)", interactive=True)
                         cost_button = gr.Button("Estimate Cost")
                         ape_button = gr.Button("APE")
 
@@ -419,10 +419,10 @@ def get_demo():
                 with gr.Row():
                     generation_prompt_sample = gr.Textbox(lines=8, value="",
                                                           label="Instruction Generation Prompts",
-                                                          disabled=True)
+                                                          interactive=True)
                     evaluation_prompt_sample = gr.Textbox(lines=8, value="",
                                                           label="Evaluation Prompts",
-                                                          disabled=True)
+                                                          interactive=True)
 
             with gr.Tab("Prompt Deployment"):
                 with gr.Row():
@@ -442,7 +442,7 @@ def get_demo():
                                                   label="Prompt (Evaluate on scoring dataset using Evaluation Template)")
                         compute_score_button = gr.Button("Compute Score")
                     with gr.Column(scale=1):
-                        test_score = gr.Textbox(lines=1, value="", label="Log(p)", disabled=True)
+                        test_score = gr.Textbox(lines=1, value="", label="Log(p)", interactive=True)
 
         ##############################
         # Button Callbacks
